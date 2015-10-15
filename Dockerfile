@@ -14,9 +14,9 @@ MAINTAINER hihouhou < hihouhou@hihouhou.com >
 RUN apt-get update && \
     apt-get install -y boinc-client 
 
-#Configure 
-#ADD moscrack.conf /etc/moscrack/moscrack.conf
-#RUN mkdir /opt/moscrack
+#Configure boinc 
+RUN mkdir -p /boinc/slots
+ADD cc_config.xml /boinc/
 
 
 #ADD links
@@ -30,4 +30,4 @@ RUN apt-get update && \
 EXPOSE 8080
 
 #CMD ["boinc", "--daemon"]
-CMD ["boinc"]
+CMD ["boinc", "--dir", "/boinc"]
