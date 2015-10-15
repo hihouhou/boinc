@@ -17,6 +17,7 @@ RUN apt-get update && \
 #Configure boinc 
 RUN mkdir -p /boinc/slots
 ADD cc_config.xml /boinc/
+#ADD remote_hosts.cfg /boinc/
 
 
 #ADD links
@@ -27,7 +28,7 @@ ADD cc_config.xml /boinc/
 #    ln -s $(find /root/ -type d -name *Acme* | grep 'blib/lib/Acme') /usr/lib/perl5/Acme
 
 
-EXPOSE 8080
+EXPOSE 31416
 
 #CMD ["boinc", "--daemon"]
 CMD ["boinc", "--dir", "/boinc"]
