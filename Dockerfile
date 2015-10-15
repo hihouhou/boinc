@@ -12,7 +12,7 @@ MAINTAINER hihouhou < hihouhou@hihouhou.com >
 
 # Update & install packages for boinc
 RUN apt-get update && \
-    apt-get install -y boinc-client boinc-manager 
+    apt-get install -y boinc-client 
 
 #Configure 
 #ADD moscrack.conf /etc/moscrack/moscrack.conf
