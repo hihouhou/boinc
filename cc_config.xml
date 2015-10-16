@@ -6,5 +6,8 @@
        <allow_remote_gui_rpc>
 	1
        </allow_remote_gui_rpc>
+       <no_gpus>
+	1
+       </no_gpus>
    </options>
 </cc_config>
