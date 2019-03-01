@@ -20,15 +20,6 @@ ADD cc_config.xml /boinc/
 #ADD remote_hosts.cfg /boinc/
 
 
-#ADD links
-#RUN ln -s /${MOSCRACK_VERSION}/moscrack /usr/local/bin/moscrack && \
-#    ln -s /${MOSCRACK_VERSION}/mosctop /usr/local/bin/mosctop && \
-#    ln -s /${MOSCRACK_VERSION}/daemon/moscd /usr/local/bin/moscd && \
-#    ln -s /${MOSCRACK_VERSION}/moscapid /usr/local/bin/moscapid && \
-#    ln -s $(find /root/ -type d -name *Acme* | grep 'blib/lib/Acme') /usr/lib/perl5/Acme
-
-
 EXPOSE 31416
 
-#CMD ["boinc", "--daemon"]
 CMD ["boinc", "--dir", "/boinc"]
